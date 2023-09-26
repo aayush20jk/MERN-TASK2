@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplhabetical Order</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: aquamarine; margin-top: 10%;">
+        <h1>Write a JavaScript function that returns a passed string with letters in
+            alphabetical order.</h1>
+
+        <span><p>give a string in box below : </p></span>
+        <input type="text" id="inputNum">
+        <button onclick="sortString()">sort</button>
+        
+        <p>give sorted string is : </p>
+        <input type="" id="result">
+
+        <script>
+            function helper(str) {
+                const charArray = str.split('');
+                charArray.sort();
+                const sortedStr = charArray.join('');
+                return sortedStr;
+            }
+
+            function sortString() {
+                document.getElementById('result').value = helper(document.getElementById("inputNum").value);
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: aquamarine; margin-top: 10%;">
+        <h1>a JavaScript program to calculate multiplication and division of
+            two numbers (input from user).</h1>
+        <form>
+            <label for="">1st Number: </label>
+            <input type="text" id="input1">
+            <br>
+            <label for="" >2nd Number: </label>
+            <input type="text" id="input2" style="margin-top: 15px; margin-bottom: 15px;">
+            <br>
+
+            <button class="multiply" type="button" onclick="multiply()">multiply</button>
+            <button class="divide" type="button" onclick="divide()">divide</button>
+        </form>
+
+        <p>the result is : <span id="result"></span></p>
+
+        <script>
+            function multiply() {
+                let num1 = document.getElementById("input1").value;
+                let num2 = document.getElementById('input2').value ;
+                document.getElementById('result').textContent = num1 * num2;
+            }
+
+            function divide() {
+                event.preventDefault();
+                let num1 = document.getElementById("input1").value;
+                let num2 = document.getElementById('input2').value;
+                document.getElementById('result').textContent = num1 / num2;
+            }
+        </script>
+    </div>
+        
+</body>
+</html>
